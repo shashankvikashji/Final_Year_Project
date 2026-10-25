@@ -1,7 +1,8 @@
+# PyTorch CPU-only wheels are published on PyTorch's CPU index, not PyPI.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # --- Computer-vision / YOLO stack (required by ml/waste_detector.py) ---
-# Install torch/torchvision FIRST from the CPU index to avoid the multi-GB CUDA build:
-#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-# then: pip install -r requirements.txt
+# torch/torchvision below are installed from the CPU index above to avoid the multi-GB CUDA build.
 torch==2.14.1+cpu
 torchvision==0.29.1+cpu
 ultralytics==8.4.182
