@@ -1,0 +1,148 @@
+# IDE and editors
+.idea/
+.vscode/
+
+# Node dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Testing and coverage
+coverage/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Build output
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files and secrets
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+
+# Credentials and private keys
+*token.json*
+*credentials.json*
+secrets.json
+*service-account*.json
+*serviceAccount*.json
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.ppk
+.credentials
+.credentials/
+.npmrc
+.netrc
+_netrc
+.pypirc
+.envrc
+.aws/
+.ssh/
+
+# Logs and debug files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dump.rdb
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+ENV/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Deployment and development tools
+.vercel/
+.chainlit/
+chainlit.md
+.ac
+
+# Local databases and project-specific private data
+agenthub/agents/youtube/db/
+memory/test_credentials.md
+
+# Local machine and deployment-specific configuration
+.gitconfig
+.emergent/
+
+# Dataset files
+waste_dataset/
+**/chemical_dataset/
+datasets/
+
+# YOLO training runs and evaluation outputs
+**/runs/
+model_evaluation/*.csv
+model_evaluation/graphs/
+model_evaluation/evaluation_report.md
+model_evaluation/evaluation_config.json
+backend/YOLO_TEST_EVALUATION_REPORT.md
+waste_training/CHEMICAL_DATASET_GUIDE.md
+test_reports/**/*.xml
+test_reports/iteration_*.json
+test_result.md
+*.cache
+.cache/
+
+# Local backup copies and original training arguments
+waste_training/_backup/
+
+# Training utilities containing machine-specific absolute dataset paths
+waste_training/build_chemical_dataset.py
+waste_training/fix_mixed_labels.py
+waste_training/verify_chemical.py
+waste_training/verify_label_fix.py
+
+# Model weights
+*.pt
+
+# Keep the model required by the Wastrix backend
+!backend/best.pt
+
+# Archives and unnecessary binary assets
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.pack
+*.deb
+*.dylib
+
+# Mobile development
+android-sdk/

@@ -1,0 +1,20 @@
+# Chemical-waste dataset (single class).
+# Fill this folder with your labelled chemical images, then train with:
+#   python waste_training/train_chemical.py
+#
+# Expected layout (YOLO format):
+#   chemical_dataset/train/images/*.jpg
+#   chemical_dataset/train/labels/*.txt   (each line: "0 cx cy w h" normalized)
+#   chemical_dataset/valid/images/*.jpg
+#   chemical_dataset/valid/labels/*.txt
+#
+# Label every chemical item as class 0:
+#   paint tins, spray cans, pesticide bottles, oil containers,
+#   detergent/bleach bottles, medicine vials, battery acid packs,
+#   lab reagent bottles, chemical drums.
+
+train: ./chemical_dataset/train/images
+val: ./chemical_dataset/valid/images
+
+nc: 1
+names: ['chemical']

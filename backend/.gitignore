@@ -1,0 +1,33 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+/build
+npm-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# Model weights and training artefacts (multi-MB binaries)
+*.pt
+!/best.pt
+waste_training/runs/
+waste_training/chemical_dataset/
+
+# Migration backups — contain live user records, never commit
+/migrations/backups/
+
+# Evaluation scratch
+runs/detect/model_evaluation/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,94 @@
+{
+  "theme": "Civic Operational (High-Contrast, Map-Centric, Utilitarian)",
+  "typography": {
+    "display": "Cabinet Grotesk",
+    "body": "IBM Plex Sans",
+    "notes": "Display font must convey authority, public works, and structure. Body font must be highly legible for dense operational data, resembling a city dashboard. No Inter for headings. Use tight tracking for headers."
+  },
+  "colors": {
+    "priority_system": {
+      "critical": "#E11D48",
+      "high": "#EA580C",
+      "medium": "#F59E0B",
+      "low": "#3B82F6"
+    },
+    "core": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "border": "#E2E8F0",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569"
+    },
+    "status": {
+      "reported": "#475569",
+      "in_progress": "#3B82F6",
+      "resolved": "#10B981"
+    },
+    "notes": "Colors are strictly derived from the priority mapping constraint. The UI acts as a neutral canvas (Slate/White) to let the priority pins shine. No decorative gradients."
+  },
+  "visual_enhancers": {
+    "borders": "1px solid #E2E8F0 or #CBD5E1. Keep radii tight (2px to 4px max) for an industrial, structural feel. Avoid large pill shapes for structural cards.",
+    "shadows": "Minimal. Use crisp, slight drop-shadows (shadow-sm) to lift map overlays instead of large diffuse glows.",
+    "textures": "Clean, flat civic-tech aesthetics. Focus on data density and legibility."
+  },
+  "layouts": {
+    "landing_page": "Map-hero layout. The map (live or image fallback) covers 100% of the viewport or acts as a massive split-screen. Opaque, high-contrast overlay card or left-sidebar for the core value prop and role selection. No centered generic hero blobs.",
+    "dashboard_ops": "Split-view architecture. Left Sidebar (30-40% width): Role-based list queue sorted by priority. Right (60-70% width): Live map with priority-colored pins.",
+    "report_flow": "Mobile-first, single-column focused form. Prioritize the camera/upload dropzone and location map picker with large touch targets. Do not overcomplicate."
+  },
+  "components": {
+    "buttons": "Sharp edges or minimal radius (4px). High contrast. Primary buttons should be bg-slate-900 text-white with a visible focus state.",
+    "cards": "Flat surfaces, 1px border. No excessive padding. Use technical bento-grid structures for metadata (time, lat/lng).",
+    "pins": "Custom map markers explicitly using the priority colors. Include an inner visual indicator (dot or icon) to enhance color-blind accessibility.",
+    "tags": "Small, uppercase, tracking-wider badges for status and priority. Use text-xs font-bold."
+  },
+  "motion": {
+    "pins": "Subtle drop-in animation on the map on load.",
+    "transitions": "Instant or very fast (150ms) for UI panels. Civic ops tools need to feel snappy, responsive, and utilitarian, not 'floaty'."
+  },
+  "accessibility": {
+    "focus": "High-contrast focus rings (ring-2 ring-slate-900 ring-offset-2) on all interactive elements. Visible keyboard focus states are mandatory.",
+    "contrast": "Ensure text inside priority tags (e.g., white text on Critical Red) strictly passes APCA/WCAG standards."
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1759401654832-ab2e73a14336?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxpbGxlZ2FsJTIwZHVtcGluZyUyMHN0cmVldCUyMHdhc3RlfGVufDB8fHx8MTc4NTEzNjUyM3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Black trash bags on sidewalk",
+        "category": "sample_report_image"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762805545352-4ac5355b0f0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxpbGxlZ2FsJTIwZHVtcGluZyUyMHN0cmVldCUyMHdhc3RlfGVufDB8fHx8MTc4NTEzNjUyM3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Garbage trucks overflowing with trash",
+        "category": "sample_report_image"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544259342-306eccfec481?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxjaXR5JTIwbmlnaHQlMjBtYXAlMjBncmlkfGVufDB8fHx8MTc4NTEzNjUyN3ww&ixlib=rb-4.1.0&q=85",
+        "description": "View of city at night",
+        "category": "hero_background_fallback"
+      }
+    ],
+    "map_style": "If embedding Google Maps, apply a muted JSON style (Silver or Grayscale). Do NOT use default saturated map colors; the map must serve as a subdued background so the 4 priority colors pop instantly."
+  },
+  "instructions_to_main_agent": [
+    "Build strictly within the YAGNI scope: Landing, Auth, Report Flow, Map Dashboard, Detail View. No extra pages.",
+    "Core models: Report and User only. Do NOT build admin settings, multi-language, notifications, gamification, or chat.",
+    "Design the entire app around the priority pin colors (critical/high/medium/low). The map must look like a real operational tool.",
+    "Ensure ALL interactive and informational elements have data-testid attributes (e.g., data-testid='report-submit-button').",
+    "Avoid transparent backgrounds in headers or overlays. Overlays must be solid or heavily blurred (backdrop-blur-xl) with high opacity.",
+    "For the Landing page, make the map the hero visually. Avoid standard SaaS landing page templates. Frame it as civic software.",
+    "Use Shadcn UI components (.js/.jsx) but heavily customize them to remove the 'default SaaS' look by enforcing sharp borders and tight metrics.",
+    "Write real, purposeful copy. No 'Lorem Ipsum'."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic AI outputs. Build a civic-tech operational dashboard aesthetic.",
+    "Avoid centered generic hero layouts and simplistic gradients. Use dynamic, asymmetric, or split-screen structures.",
+    "Create depth with explicit z-index hierarchy and crisp shadows.",
+    "Use specific interaction transitions (e.g., transition-colors, transition-transform) rather than 'transition-all'.",
+    "Never apply text-align: center to the root App container.",
+    "Use sharp rectangular or slightly rounded buttons matching the industrial aesthetic, with clear hover animations.",
+    "Use sonner for toast notifications.",
+    "Do not use emojis as icons. Use lucide-react icons.",
+    "Ensure generous but structured spacing (e.g., p-4 to p-8 internally for cards)."
+  ]
+}

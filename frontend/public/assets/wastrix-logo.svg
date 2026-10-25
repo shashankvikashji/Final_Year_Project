@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Wastrix logo">
+  <defs>
+    <linearGradient id="wx-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- leaf / eco mark: two leaves forming a circular recycling loop -->
+  <path d="M32 6c-9.5 0-17.5 6.6-20 15.6a4 4 0 0 0 1.6 4.9l2.2 1.6A4 4 0 0 1 21 24.4C23.3 17.3 27.4 14 32 14c7.2 0 13 5.8 13 13 0 3.6-1.5 7-4 9.4a4 4 0 0 0 5.6 5.7A21 21 0 0 0 53 27c0-11.6-9.4-21-21-21Z" fill="url(#wx-g)"/>
+  <path d="M32 34c-7.2 0-13 5.8-13 13a4 4 0 0 0 6.4 3.2A4 4 0 0 0 27 46.4c0-2.8 2.2-5 5-5s5 2.2 5 5a4 4 0 0 0 6.4 3.2A13 13 0 0 0 32 34Z" fill="#34D399"/>
+  <circle cx="32" cy="27" r="4.5" fill="#0B1220"/>
+</svg>
